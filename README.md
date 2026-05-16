@@ -4,6 +4,12 @@ A high-precision, stateless conversational API for recommending SHL assessments 
 
 ![API Demo](assets/api_demo.png)
 
+## 🌐 Live Deployment
+
+The API is deployed and accessible at:
+**[https://shl-recommender.happypebble-9ead992a.centralindia.azurecontainerapps.io/](https://shl-recommender.happypebble-9ead992a.centralindia.azurecontainerapps.io/)**
+
+
 ## 🚀 Overview
 
 The **SHL Assessment Recommender** is an intelligent backend service that helps recruiters and hiring managers find the most relevant assessments from the SHL catalog. It employs a **Hybrid Retrieval Pipeline** (BM25s + Domain-Specific Heuristics) and **Gemini 3.1 Flash-Lite** for natural language understanding, ensuring strict adherence to the official assessment catalog.
@@ -83,7 +89,18 @@ The **SHL Assessment Recommender** is an intelligent backend service that helps 
 └── README.md           # This file
 ```
 
-## 📖 API Documentation
+## 📖 API Documentation & Testing
+
+### Interactive Documentation (Swagger UI)
+You can test the API directly from your browser using the interactive documentation:
+- **Live Docs**: [https://shl-recommender.happypebble-9ead992a.centralindia.azurecontainerapps.io/docs](https://shl-recommender.happypebble-9ead992a.centralindia.azurecontainerapps.io/docs)
+
+**Instructions to test via Docs:**
+1. Navigate to the `/docs` URL above.
+2. Click on the **POST `/chat`** endpoint.
+3. Click **"Try it out"**.
+4. Paste a message into the `messages` array (e.g., `"I need to hire a Software Engineer"`).
+5. Click **Execute** to see the AI's response and recommendations.
 
 ### `POST /chat`
 
