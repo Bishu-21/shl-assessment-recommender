@@ -2,6 +2,7 @@
 FastAPI application for the SHL Assessment Recommender.
 
 Endpoints:
+  GET  /        → {"message": "..."}
   GET  /health  → {"status": "ok"}
   POST /chat    → ChatResponse
 """
@@ -52,6 +53,12 @@ app.add_middleware(
 # ---------------------------------------------------------------------------
 # Endpoints
 # ---------------------------------------------------------------------------
+
+@app.get("/")
+async def root():
+    """Welcome endpoint."""
+    return {"message": "SHL Assessment Recommender API is running!"}
+
 
 @app.get("/health", response_model=HealthResponse)
 async def health():
